@@ -14,15 +14,86 @@ const LatestJobPost = async () => {
   // console.log(jobpost)
 
   return (
-    <div>
-   {jobpost.map((job)=>{
-return <>
-{/* Here we will render job card */}
-<div key={job.job_id}>{job.job_id}</div>
-</>
-   })}
-      
-    </div>
+    <section className="flex flex-wrap">
+    <section className="mt-5 ml-8 job bg-white-500 w-96 ">
+<div className="flex mb-7">
+<img src="https://media.glassdoor.com/sqll/425440/e-solutions-squarelogo-1537548633301.png"  className="h-14 border-4 border-white-500  mr-6"alt="" srcset="" />
+<div>
+ <h2 className="font-semibold">React Enginner</h2>
+ <span>AMS Extra</span>
+</div>
+</div>
+<div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo debitis eius reiciendis nostrum iusto repellat libero facere esse, doloremque ...</p>
+</div>
+<div className="skills mt-5">
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">React</span>
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Next</span>
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Node</span>
+more..
+</div>
+<div className="flex justify-between mt-3 items-center">
+<span className="border-white m-3  bg-slate-100 rounded-xl  text-xs">Full time</span>
+<span className="border-white m-3  bg-slate-100 rounded-xl text-xs">18 hours</span>
+<div className="flex">
+<button className="m-4 rounded-xl bg-green-500 text-white p-2 w-40">View Detail</button>
+</div>
+</div>
+
+</section>
+    <section className="mt-5 ml-8 job bg-white-500 w-96 ">
+<div className="flex mb-7">
+<img src="https://media.glassdoor.com/sqll/425440/e-solutions-squarelogo-1537548633301.png"  className="h-14 border-4 border-white-500  mr-6"alt="" srcset="" />
+<div>
+ <h2 className="font-semibold">React Enginner</h2>
+ <span>AMS Extra</span>
+</div>
+</div>
+<div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo debitis eius reiciendis nostrum iusto repellat libero facere esse, doloremque ...</p>
+</div>
+<div className="skills mt-5">
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">React</span>
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Next</span>
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Node</span>
+more..
+</div>
+<div className="flex justify-between mt-3 items-center">
+<span className="border-white m-3  bg-slate-100 rounded-xl  text-xs">Full time</span>
+<span className="border-white m-3  bg-slate-100 rounded-xl text-xs">18 hours</span>
+<div className="flex">
+<button className="m-4 rounded-xl bg-green-500 text-white p-2 w-40">View Detail</button>
+</div>
+</div>
+
+</section>
+    <section className="mt-5 ml-8 job bg-white-500 w-96 ">
+<div className="flex mb-7">
+<img src="https://media.glassdoor.com/sqll/425440/e-solutions-squarelogo-1537548633301.png"  className="h-14 border-4 border-white-500  mr-6"alt="" srcset="" />
+<div>
+ <h2 className="font-semibold">React Enginner</h2>
+ <span>AMS Extra</span>
+</div>
+</div>
+<div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo debitis eius reiciendis nostrum iusto repellat libero facere esse, doloremque ...</p>
+</div>
+<div className="skills mt-5">
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">React</span>
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Next</span>
+<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Node</span>
+more..
+</div>
+<div className="flex justify-between mt-3 items-center">
+<span className="border-white m-3  bg-slate-100 rounded-xl  text-xs">Full time</span>
+<span className="border-white m-3  bg-slate-100 rounded-xl text-xs">18 hours</span>
+<div className="flex">
+<button className="m-4 rounded-xl bg-green-500 text-white p-2 w-40">View Detail</button>
+</div>
+</div>
+
+</section>
+</section>
   )
 }
 

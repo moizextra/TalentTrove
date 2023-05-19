@@ -20,10 +20,12 @@ const Navbar = () => {
     <li className={`m-8  cursor-pointer  rounded-sm ${selected=== "Estimated Salary" ? 'border-b-4 border-green-500' : ''}`} onClick={handleClickItems}>Estimated Salary</li>
     <li className={`m-8  cursor-pointer  rounded-sm ${selected=== "Job Search" ? 'border-b-4 border-green-500' : ''}`} onClick={handleClickItems}><Link href={`/JobSearch`}>Job Search</Link></li>
 </ul>
-<div className="flex ">
+<div className="flex">
   <MdOutlineNightlight color="black"/>
     <button>toggle</button>
     icon2
+    <button className="m-4 rounded-xl bg-green-500 text-white p-2 w-20"><Link href={"/Signup"}>Signup</Link></button>
+    <button className="m-4 rounded-xl bg-green-500 text-white p-2 w-20">Login</button>
 </div>
     </nav>
   )

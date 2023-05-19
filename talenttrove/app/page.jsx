@@ -16,7 +16,7 @@ export default function Home() {
         <span>{currentDate}</span>
       </div>
     <section className="mt-10">
-      <div className=' main flex justify-around'>
+      <div className=' main flex justify-between'>
         <LatestJobPost/>
         <RecommendedJobs/>
       </div>
