@@ -15,12 +15,12 @@ const LatestJobPost = async () => {
 
   return (
     <section className="flex flex-wrap">
-    <section className="mt-5 ml-8 job bg-white-500 w-96 ">
-<div className="flex mb-7">
+    <section className="mt-5 ml-8 job bg-white-500 w-96 h-80 ">
+<div className="flex mb-5">
 <img src="https://media.glassdoor.com/sqll/425440/e-solutions-squarelogo-1537548633301.png"  className="h-14 border-4 border-white-500  mr-6"alt="" srcset="" />
 <div>
- <h2 className="font-semibold">React Enginner</h2>
- <span>AMS Extra</span>
+ <span className="font-semibold">React Enginner</span>
+ <span className="ml-3 text-gray-500">AMS Extra</span><br/><span>Posted:1 day ago</span>
 </div>
 </div>
 <div>
@@ -41,12 +41,12 @@ more..
 </div>
 
 </section>
-    <section className="mt-5 ml-8 job bg-white-500 w-96 ">
-<div className="flex mb-7">
+    <section className="mt-5 ml-8 job bg-white-500 w-96 h-80 ">
+<div className="flex mb-5">
 <img src="https://media.glassdoor.com/sqll/425440/e-solutions-squarelogo-1537548633301.png"  className="h-14 border-4 border-white-500  mr-6"alt="" srcset="" />
 <div>
- <h2 className="font-semibold">React Enginner</h2>
- <span>AMS Extra</span>
+ <span className="font-semibold">React Enginner</span>
+ <span className="ml-3 text-gray-500">AMS Extra</span><br/><span>Posted:1 day ago</span>
 </div>
 </div>
 <div>
@@ -67,12 +67,12 @@ more..
 </div>
 
 </section>
-    <section className="mt-5 ml-8 job bg-white-500 w-96 ">
-<div className="flex mb-7">
+    <section className="mt-5 ml-8 job bg-white-500 w-96 h-80 ">
+<div className="flex mb-5">
 <img src="https://media.glassdoor.com/sqll/425440/e-solutions-squarelogo-1537548633301.png"  className="h-14 border-4 border-white-500  mr-6"alt="" srcset="" />
 <div>
- <h2 className="font-semibold">React Enginner</h2>
- <span>AMS Extra</span>
+ <span className="font-semibold">React Enginner</span>
+ <span className="ml-3 text-gray-500">AMS Extra</span><br/><span>Posted:1 day ago</span>
 </div>
 </div>
 <div>
@@ -93,6 +93,7 @@ more..
 </div>
 
 </section>
+
 </section>
   )
 }

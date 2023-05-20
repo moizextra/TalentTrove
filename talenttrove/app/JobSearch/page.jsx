@@ -10,7 +10,18 @@ const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Fri
 const today = new Date();
 const dayOfWeek = daysOfWeek[today.getDay()];
 const currentDate = ` ${dayOfWeek},${day} ${month} ${year}`;
-const page = () => {
+const page = async() => {
+  const url = 'https://jsearch.p.rapidapi.com/search?query=Python%20developer%20in%20Texas%2C%20USA&page=1&num_pages=1';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '7fdb904416msh4dc4281a8455929p1e4d1ejsnea807bb4d77c',
+      'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+    }
+  };
+  const res=await fetch(url, options);
+  const data= await res.json();
+  const jobpost=data.data;
   return (<>
 <div className="">
         <h1 className="font-bold text-2xl mt-10">Let's go !Now Start Navigating your Career</h1>
@@ -18,13 +29,12 @@ const page = () => {
       </div>
 <section className="mt-10">
   <div>
-  <Searchbar/>
+  <Searchbar />
   </div>
   <div className="flex justify-between mt-12">
     <Sidebar/>
-    <Jobs/>
+    <Jobs jobpost={jobpost}/>
   </div>
-
 </section>  
   </>
 )
