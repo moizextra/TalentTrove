@@ -24,9 +24,9 @@ const Jobs = ({jobpost}) => {
 <p className="text-gray-500 font-medium mt-3">{job.job_description.slice(0,600)}..<Link href={ `/${job.job_id }`}>view more</Link></p>
 </div>
 <div className="skills mt-5">
-  {job.job_required_skills.map((skill)=>{
- return <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">{skill}</span>
-  })}
+ <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">React</span>
+ <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Next</span>
+ <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Typescript</span>
 
 </div>
 <div className="flex justify-between mt-4 items-center">
