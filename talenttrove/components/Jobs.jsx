@@ -1,33 +1,51 @@
 import React from 'react'
+import Link from 'next/link';
+import millify from "millify";
 import Image from 'next/image';
+import {FcManager} from "react-icons/fc"
+import {ImLocation2} from "react-icons/im"
+import {BsPersonFill} from "react-icons/bs"
+
 const Jobs = ({jobpost}) => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col mt-6">
+ <span className="ml-5 text-left text-gray-600">Showing <span className='font-bold'>{jobpost.length} </span>jobs</span>
 {jobpost.map((job)=>{
   return <>
     <section className="mt-3 ml-3 job bg-white-500 ">
 <div className="flex items-center">
-    <img src="https://media.glassdoor.com/sqll/425440/e-solutions-squarelogo-1537548633301.png"  className="h-14 border-4 border-white-500  mr-3"alt="" srcset="" />
+{job.employer_logo? <img src={job.employer_logo} className="h-14 w-16 border-4 border-white-500  mr-3"alt="" srcset="" />:<BsPersonFill size={50} className='border-4 border-white-500  mr-3'/>}
     <div className='flex flex-col'>
-      <span className='font-bold'>React Enginner</span>
-      <span className='text-gray-500'>AMS Extra Posted: 1 day ago</span>
+      <span className='font-bold'>{job.employer_name}</span>
+      <span className='text-gray-500'>{job.job_publisher} Posted: 1 day ago</span>
     </div>
 </div>
 <div>
-<p className="text-gray-500 font-medium mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo debitis eius reiciendis nostrum iusto repellat libero facere esse, doloremque quaerat possimus reprehenderit unde ad ab, dolores eaque! Eaque sapiente soluta recusandae quos iusto quam qui asperiores, aspernatur velit libero assumenda provident sunt neque id illo amet doloremque rem rerum alias. Iste beatae ab asperiores saepe corrupti rerum rem quisquam, labore at commodi veritatis ad officia enim voluptatibus illum esse possimus inventore autem nam voluptatem impedit dolorem sapiente similique. Iusto impedit fuga quia. Laudantium fugit dicta nam amet, voluptate ipsum reiciendis sapiente officia nihil officiis! Adipisci amet quasi, provident a debitis quos eligendi deleniti magnam ex numquam iusto hic dolores ab excepturi magni. Minima porro mollitia libero, quisquam impedit vel sit ratione ab?</p>
+<p className="text-gray-500 font-medium mt-3">{job.job_description.slice(0,600)}..<Link href={ `/${job.job_id }`}>view more</Link></p>
 </div>
 <div className="skills mt-5">
-<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">React</span>
-<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Next</span>
-<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Node</span>
-<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">js</span>
-<span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Django</span>
+  {job.job_required_skills.map((skill)=>{
+ return <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">{skill}</span>
+  })}
+
 </div>
 <div className="flex justify-between mt-4 items-center">
-  <span>Full time</span>
+  <div className='flex items-center'>
+<span className="border-white m-3 p-3 flex  items-center  bg-slate-100 rounded-xl text-xs">
+  {job.job_employment_type}
+ <span><FcManager size={20}/></span> 
+</span>
+<span className="border-white m-3 p-3 flex  items-center  bg-slate-100 rounded-xl text-xs">
+  {job.job_is_remote?"Remote":"Onsite"}
+</span>
+<span className="border-white m-3 p-3 flex  items-center  bg-slate-100 rounded-xl text-xs">
+  {job.job_city},{job.job_country}
+  <span><ImLocation2 size={17}/></span> 
+</span>
+  </div>
   <div className="flex">
     <button>View Details</button>
-    <button className="m-4 rounded-xl bg-green-500 text-white p-2 w-40">Apply Now</button>
+    <button className="m-4 rounded-xl bg-green-500 text-white p-2 w-40"><Link href={"https://www.google.com/search?gl=us&hl=en&rciv=jb&q=python+developer+in+texas,+usa&start=0&ibp=htl;jobs#fpstate=tldetail&htivrt=jobs&htiq=python+developer+in+texas,+usa&htidocid=b36aCwNT58QAAAAAAAAAAA%3D%3D"}>Apply Now</Link></button>
   </div>
 </div>
 
