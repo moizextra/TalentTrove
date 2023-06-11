@@ -1,18 +1,16 @@
 import React from 'react'
 import Link from 'next/link';
-import millify from "millify";
-import Image from 'next/image';
+import Loading from './Loading';
 import {FcManager} from "react-icons/fc"
 import {ImLocation2} from "react-icons/im"
 import {BsPersonFill} from "react-icons/bs"
-
 const Jobs = ({jobpost}) => {
   return (
     <section className="flex flex-col mt-6">
- <span className="ml-5 text-left text-gray-600">Showing <span className='font-bold'>{jobpost.length} </span>jobs</span>
-{jobpost.map((job)=>{
+ 
+ { jobpost? jobpost.map((job)=>{
   return <>
-    <section className="mt-3 ml-3 job bg-white-500 ">
+    <section key={job.job_id} className="mt-3 ml-3 job bg-white-500 ">
 <div className="flex items-center">
 {job.employer_logo? <img src={job.employer_logo} className="h-14 w-16 border-4 border-white-500  mr-3"alt="" srcset="" />:<BsPersonFill size={50} className='border-4 border-white-500  mr-3'/>}
     <div className='flex flex-col'>
@@ -21,9 +19,10 @@ const Jobs = ({jobpost}) => {
     </div>
 </div>
 <div>
-<p className="text-gray-500 font-medium mt-3">{job.job_description.slice(0,600)}..<Link href={ `/${job.job_id }`}>view more</Link></p>
+<p className="text-gray-500 font-medium mt-3">{job.job_description.slice(0,600)}..<Link href={ `JobDetail/${job.job_id }`}>view more</Link></p>
 </div>
 <div className="skills mt-5">
+
  <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">React</span>
  <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Next</span>
  <span className="border-white p-3 m-3  bg-slate-100 rounded-xl text-xs">Typescript</span>
@@ -52,7 +51,7 @@ const Jobs = ({jobpost}) => {
     </section>
     </>
 
-})}
+}):<Loading/>}
   
       </section>
   )

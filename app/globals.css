@@ -42,7 +42,7 @@ padding: 0px 12px;
 .jobdetailbg{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 12px;
-  height: 1200px;
+  height: 1400px;
   width: 750px;
 }
 .backbtn{
@@ -138,9 +138,23 @@ color: black;
 border-radius:34px ;
 }
 .navonscroll{
-  /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.43);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
+}
+.employyinfo{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.list-style-type{
+  list-style-type: none;
+}
+
+.list-style-type li::before {
+  content: "○";
+  color:green; /* Desired bullet color */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 15px;
 }
