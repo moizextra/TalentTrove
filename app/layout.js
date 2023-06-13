@@ -10,11 +10,11 @@ export default function Layout({ children }) {
           <meta name="description"  />
         </head>
         <body className="flex justify-center flex-col">
- <Navbar />
           <main  className=" main flex justify-center flex-col  " >
+          <Navbar />
             {children}
-          </main>
           <Footer/>
+          </main>
         </body>
       </html>
     </>

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Link from 'next/link';
 import Loading from './Loading';
@@ -8,7 +9,7 @@ const Jobs = ({jobpost}) => {
   return (
     <section className="flex flex-col mt-6">
  
- { jobpost? jobpost.map((job)=>{
+ { jobpost !==[]? jobpost.map((job)=>{
   return <>
     <section key={job.job_id} className="mt-3 ml-3 job bg-white-500 ">
 <div className="flex items-center">
