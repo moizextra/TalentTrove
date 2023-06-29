@@ -30,11 +30,11 @@ const page = () => {
   
   useEffect(() => {
     const fetchData = async () => {
-      const url = 'https://jsearch.p.rapidapi.com/search?query=react%20developer%20in%20Texas%2C%20USA&page=1&num_pages=1';
+      const url = 'https://jsearch.p.rapidapi.com/search?query=Python%20developer%20in%20Texas%2C%20USA&page=1&num_pages=1';
       const options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '0fe38d29a1msh841422709f6802bp1eea70jsne1d2fcdf2cc2',
+          'X-RapidAPI-Key': '7fdb904416msh4dc4281a8455929p1e4d1ejsnea807bb4d77c',
           'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
         }
       };

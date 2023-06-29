@@ -3,7 +3,7 @@ export const fetchrecentjobs= async()=>{
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '0fe38d29a1msh841422709f6802bp1eea70jsne1d2fcdf2cc2',
+            'X-RapidAPI-Key': '7fdb904416msh4dc4281a8455929p1e4d1ejsnea807bb4d77c',
             'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
         }
     };
