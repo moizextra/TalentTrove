@@ -32,7 +32,7 @@ const Jobs = ({ jobpost,isloading }) => {
             <div>
               <p className="text-gray-500 font-medium mt-3">
                 {job.job_description.slice(0, 600)}..
-                <Link href={`JobDetail/${job.job_id}`}>view more</Link>
+                <Link href={`JobDetail/job_id=${job.job_id}`}>view more</Link>
               </p>
             </div>
             <div className="skills mt-5">
