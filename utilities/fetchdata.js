@@ -6,7 +6,7 @@
       num_pages: '1'
     },
     headers: {
-      'X-RapidAPI-Key': '7fdb904416msh4dc4281a8455929p1e4d1ejsnea807bb4d77c',
+      'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY || "",
       'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     }
   };
