@@ -19,13 +19,13 @@ const data=result.data;
         <span className='text-gray-500'>{currentDate}</span>
       </div>
     <section className="mt-10">
-      <div className=' main flex justify-between'>
+      <div className=' main flex justify-between '  >
         <div>
-      <h1 className='text-sm font-bold'>Latest Job Post</h1>
+      <h1 className='text-2xl font-bold mb-4'>Latest Job Post</h1>
         <LatestJobPost data={data}/>
         </div>
-        <div>
-          <h1 className='text-sm font-bold'>Recommended Jobs</h1>
+        <div className='h-screen'>
+          <h1 className='text-2xl font-bold mb-4'>Recommended Jobs</h1>
         <RecommendedJobs/>
         </div>
       </div>
